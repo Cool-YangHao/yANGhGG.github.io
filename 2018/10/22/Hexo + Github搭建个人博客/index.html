@@ -89,8 +89,10 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181022160953.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/SSH%20key.png">
+<meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.png">
+<meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png">
-<meta property="og:updated_time" content="2018-10-24T01:52:59.331Z">
+<meta property="og:updated_time" content="2018-10-24T02:23:25.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + Github搭建属于自己的博客">
 <meta name="twitter:description" content="写在前面&amp;ensp;&amp;ensp;记得初中时期就喜欢折腾网站博客，对这方面有很大的兴趣，当年在互联网上认识了一个老师，他是一个影视网站的站长，软磨硬泡，让他成为了我的网站学习的启蒙老师,刚开始的时候他教给我一些小任务，比如和其它网站交换友情链接，来提升自己网站的流量，让百度与各个搜索引擎收录自己的网站的页面，从而提升排名，后来了解到这还是一门技术–SEO，也就是俗称的网站优化。 &amp;ensp;&amp;ens">
@@ -407,14 +409,9 @@
 <p>安装Node.js和配置好Node.js环境，打开cmd命令行，成功界面如下</p>
 <h2 id="三、Hexo安装"><a href="#三、Hexo安装" class="headerlink" title="三、Hexo安装"></a>三、Hexo安装</h2><p>4、安装Hexo,我是在D盘创建了一个Hexo文件夹, 创建完文件夹进入，然后开始Hexo的安装。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /d/hexo           创建博客文件夹</span><br><span class="line">$ <span class="built_in">cd</span> /d/hexo              进入博客文件夹</span><br><span class="line">$ npm install hexo -g     开始安装Hexo</span><br></pre></td></tr></table></figure>
-<p>输入npm install hexo -g，开始安装Hexo</p>
-<p>输入hexo -v，检查hexo是否安装成功</p>
-<p>输入hexo init，初始化该文件夹（有点漫长的等待。。。）</p>
-<p>看到后面的“Start blogging with Hexo！”，激动有木有！！！！！</p>
-<p>输入npm install，安装所需要的组件</p>
-<p>输入hexo g，首次体验Hexo</p>
-<p> 输入hexo s，开启服务器，访问该网址，正式体验Hexo</p>
-<p>问题：假如页面一直无法跳转，那么可能端口被占用了。此时我们ctrl+c停止服务器，接着输入“hexo server -p 端口号”来改变端口号</p>
+<p>输入npm install hexo -g，开始安装Hexo<br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.png" div="" align="center"></p>
+<p>输入hexo -v，检查hexo是否安装成功<br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png" div="" align="center"></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init                初始文件夹</span><br><span class="line"></span><br><span class="line">$ npm install              安装需要的组件</span><br><span class="line">$ hexo g/generate          生成网页静态文件 </span><br><span class="line">$ hexo s/server            启动本地服务器，http://localhost:4000/</span><br></pre></td></tr></table></figure>
 <p>那么出现如下图就成功了</p>
 <p> 5、将Hexo与Github page联系起来，设置Git的user name和email（如果是第一次的话）</p>
 <p>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</p>
