@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png">
-<meta property="og:updated_time" content="2018-10-24T02:23:25.199Z">
+<meta property="og:updated_time" content="2018-10-24T02:41:12.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + Github搭建属于自己的博客">
 <meta name="twitter:description" content="写在前面&amp;ensp;&amp;ensp;记得初中时期就喜欢折腾网站博客，对这方面有很大的兴趣，当年在互联网上认识了一个老师，他是一个影视网站的站长，软磨硬泡，让他成为了我的网站学习的启蒙老师,刚开始的时候他教给我一些小任务，比如和其它网站交换友情链接，来提升自己网站的流量，让百度与各个搜索引擎收录自己的网站的页面，从而提升排名，后来了解到这还是一门技术–SEO，也就是俗称的网站优化。 &amp;ensp;&amp;ens">
@@ -401,35 +401,22 @@
 <p>&ensp;&ensp;高中时期搭建过一个博客，自己购买域名，自己搞服务器，自己弄备案，最后做好之后还是很有成就感的，记得那个博客上面我写过好多东西，然而后来因为自己的懒惰，博客没有更新维护，域名到期，服务器也到期，后来导致被删除博客网站的数据，现在想来，还是很可惜的。</p>
 <p>&ensp;&ensp; 现在是我的大三下学期，本学期正好开设了一门web专业课，做这个博客的原因有二，一个是因为要继续把博客开下去，二是正好这也是一个期末作业，检验自己的学习水平。这个博客呢，还是遇到过一些坑的，大坑算不上，都是一些小坑，下面我们就开始博客搭建吧，本博客采用Hexo + Github搭建。</p>
 <h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>1.Github创建一个做存储的仓库<br>2.搭建Node.Js环境<br>3.Gitbash环境配置</p>
-<h2 id="一、Github-页面"><a href="#一、Github-页面" class="headerlink" title="一、Github 页面"></a>一、Github 页面</h2><blockquote>
-<p>首先你需要到Github上注册一个账号<br>之后创建一个仓库，这里仓库名字是有要求的，必须是”yourname.github.io”<br>创建完仓库之后，为了之后提交博客内容到Github，首先必须安装Git，如果提交方式打算使用SSH的话还需要在本地创建一个SSH KEY并将其添加到Github上。  </p>
+<h2 id="一、Github-仓库配置"><a href="#一、Github-仓库配置" class="headerlink" title="一、Github 仓库配置"></a>一、Github 仓库配置</h2><blockquote>
+<p>首先你需要到Github上注册一个账号<br>之后创建一个仓库，这里仓库名字是有要求的，必须是”yourname.github.io”</p>
 </blockquote>
-<p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181022160953.png" div="" align="center"><br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/SSH%20key.png" div="" align="center"></p>
-<h2 id="二、Hexo环境搭建"><a href="#二、Hexo环境搭建" class="headerlink" title="二、Hexo环境搭建"></a>二、Hexo环境搭建</h2><p>1.安装并配置好Node.js环境,用来生成静态页面<br>2.下载<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git</a>，用来上传博客页面</p>
-<p>安装Node.js和配置好Node.js环境，打开cmd命令行，成功界面如下</p>
+<p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20181022160953.png" div="" align="center"></p>
+<blockquote>
+<p>创建完仓库之后，为了之后提交博客内容到Github，首先必须安装Git，如果提交方式打算使用SSH的话还需要在本地创建一个SSH KEY并将其添加到Github上。  </p>
+</blockquote>
+<p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/SSH%20key.png" div="" align="center"></p>
+<h2 id="二、环境搭建"><a href="#二、环境搭建" class="headerlink" title="二、环境搭建"></a>二、环境搭建</h2><p>1.安装并配置好Node.js环境,用来生成静态页面<br>2.下载<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git</a>，用来上传博客页面</p>
 <h2 id="三、Hexo安装"><a href="#三、Hexo安装" class="headerlink" title="三、Hexo安装"></a>三、Hexo安装</h2><p>4、安装Hexo,我是在D盘创建了一个Hexo文件夹, 创建完文件夹进入，然后开始Hexo的安装。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /d/hexo           创建博客文件夹</span><br><span class="line">$ <span class="built_in">cd</span> /d/hexo              进入博客文件夹</span><br><span class="line">$ npm install hexo -g     开始安装Hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /d/hexo           <span class="comment">#创建博客文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> /d/hexo              <span class="comment">#进入博客文件夹</span></span><br><span class="line">$ npm install hexo -g     <span class="comment">#开始安装Hexo</span></span><br></pre></td></tr></table></figure>
 <p>输入npm install hexo -g，开始安装Hexo<br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.png" div="" align="center"></p>
 <p>输入hexo -v，检查hexo是否安装成功<br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png" div="" align="center"></p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init                初始文件夹</span><br><span class="line"></span><br><span class="line">$ npm install              安装需要的组件</span><br><span class="line">$ hexo g/generate          生成网页静态文件 </span><br><span class="line">$ hexo s/server            启动本地服务器，http://localhost:4000/</span><br></pre></td></tr></table></figure>
-<p>那么出现如下图就成功了</p>
-<p> 5、将Hexo与Github page联系起来，设置Git的user name和email（如果是第一次的话）</p>
-<p>上图是在其文件夹里面鼠标右键，点击Git Base Here。这里“feng”可以替换成自己的用户名，邮箱可以替换成自己的邮箱</p>
-<p>输入cd ~/.ssh，检查是否由.ssh的文件夹</p>
-<p>输入ls，列出该文件下的内容。下图说明存在</p>
-<p> 输入ssh-keygen -t rsa -C “929762930@qq.com”，连续三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub（默认存储路径是：C:\Users\Administrator.ssh）。</p>
-<p> 输入eval “$(ssh-agent -s)”，添加密钥到ssh-agent</p>
-<p> 再输入ssh-add ~/.ssh/id_rsa，添加生成的SSH key到ssh-agent</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init                <span class="comment">#初始文件夹</span></span><br><span class="line">$ npm install              <span class="comment">#安装需要的组件</span></span><br><span class="line">$ hexo g                   <span class="comment">#等同于hexo generate，生成网页静态文件 </span></span><br><span class="line">$ hexo s                   <span class="comment">#等同于hexo server，启动本地服务器</span></span><br></pre></td></tr></table></figure>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>笔者更换后的主题为NexT，其Github网址为：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> 。首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next<span class="string">"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="创建一片新文章"><a href="#创建一片新文章" class="headerlink" title="创建一片新文章"></a>创建一片新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="Cannot-GET-xxx-xxx-错误"><a href="#Cannot-GET-xxx-xxx-错误" class="headerlink" title="Cannot GET /xxx.xxx 错误"></a>Cannot GET /xxx.xxx 错误</h3><p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png" div="" align="center">   </p>
-<p>在全部都配置好之后，我发现有一些页面点击后会出现Cannot GET/xxx 的错误，根据错误提示，我猜测是没有这个页面导致，于是创建菜单页面。</p>
+<h3 id="Cannot-GET-xxx-xxx-错误"><a href="#Cannot-GET-xxx-xxx-错误" class="headerlink" title="Cannot GET /xxx.xxx 错误"></a>Cannot GET /xxx.xxx 错误</h3><p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png" div="" align="center"><br>在全部都配置好之后，我发现有一些页面点击后会出现Cannot GET/xxx 的错误，根据错误提示，我猜测是没有这个页面导致，于是创建菜单页面，创建完成后，果然没有报错。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
 <p>参考链接</p>
 <ul>
@@ -602,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">2.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Github-页面"><span class="nav-number">3.</span> <span class="nav-text">一、Github 页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、Hexo环境搭建"><span class="nav-number">4.</span> <span class="nav-text">二、Hexo环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Hexo安装"><span class="nav-number">5.</span> <span class="nav-text">三、Hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">6.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一片新文章"><span class="nav-number">6.1.</span> <span class="nav-text">创建一片新文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行服务"><span class="nav-number">6.2.</span> <span class="nav-text">运行服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">6.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">6.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cannot-GET-xxx-xxx-错误"><span class="nav-number">6.5.</span> <span class="nav-text">Cannot GET /xxx.xxx 错误</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">2.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、Github-仓库配置"><span class="nav-number">3.</span> <span class="nav-text">一、Github 仓库配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、环境搭建"><span class="nav-number">4.</span> <span class="nav-text">二、环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、Hexo安装"><span class="nav-number">5.</span> <span class="nav-text">三、Hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#更换主题"><span class="nav-number">6.</span> <span class="nav-text">更换主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cannot-GET-xxx-xxx-错误"><span class="nav-number">6.1.</span> <span class="nav-text">Cannot GET /xxx.xxx 错误</span></a></li></ol></li></ol></div>
             
 
           </div>
