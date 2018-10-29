@@ -91,8 +91,9 @@
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/SSH%20key.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png">
+<meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png">
 <meta property="og:image" content="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/%E5%85%B3%E4%BA%8E%E7%95%8C%E9%9D%A2Get%20xxx.png">
-<meta property="og:updated_time" content="2018-10-24T02:55:21.346Z">
+<meta property="og:updated_time" content="2018-10-24T04:38:19.715Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + Github搭建属于自己的博客">
 <meta name="twitter:description" content="写在前面&amp;ensp;&amp;ensp;记得初中时期就喜欢折腾网站博客，对这方面有很大的兴趣，当年在互联网上认识了一个老师，他是一个影视网站的站长，软磨硬泡，让他成为了我的网站学习的启蒙老师,刚开始的时候他教给我一些小任务，比如和其它网站交换友情链接，来提升自己网站的流量，让百度与各个搜索引擎收录自己的网站的页面，从而提升排名，后来了解到这还是一门技术–SEO，也就是俗称的网站优化。 &amp;ensp;&amp;ens">
@@ -237,32 +238,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
+        <li class="menu-item menu-item-作品">
+          <a href="/作品/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
             
-            日程表
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
+            作品
           </a>
         </li>
       
@@ -416,7 +397,7 @@
 <p>输入hexo -v，检查hexo是否安装成功<br><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/hexo%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA2.png" div="" align="center"></p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init                <span class="comment">#初始文件夹</span></span><br><span class="line">$ npm install              <span class="comment">#安装需要的组件</span></span><br><span class="line">$ hexo g                   <span class="comment">#等同于hexo generate，生成网页静态文件 </span></span><br><span class="line">$ hexo s                   <span class="comment">#等同于hexo server，启动本地服务器</span></span><br></pre></td></tr></table></figure>
 <h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>笔者更换后的主题为NexT，其Github网址为：<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next</a> 。首先将NexT的主题源文件下载到本地，使用Git克隆指令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next<span class="string">"</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Cannot-GET-xxx-xxx-错误"><a href="#Cannot-GET-xxx-xxx-错误" class="headerlink" title="Cannot GET /xxx.xxx 错误"></a>Cannot GET /xxx.xxx 错误</h3><p>在全部都配置好之后，我发现有一些页面点击后会出现Cannot GET/xxx 的错误，根据错误提示，我猜测是没有这个页面导致，于是创建菜单页面，创建完成后，果然没有报错。</p>
+<h3 id="Cannot-GET-xxx-xxx-错误"><a href="#Cannot-GET-xxx-xxx-错误" class="headerlink" title="Cannot GET /xxx.xxx 错误"></a>Cannot GET /xxx.xxx 错误</h3><p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/Cannot%E9%94%99%E8%AF%AF.png" div="" aglin="center"><br>在全部都配置好之后，我发现有一些页面点击后会出现Cannot GET/xxx 的错误，根据错误提示，我猜测是没有这个页面导致，于是创建菜单页面，创建完成后，果然没有报错。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">"about"</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://github.com/yANGhGG/yANGhGG.github.io/raw/master/images/%E5%85%B3%E4%BA%8E%E7%95%8C%E9%9D%A2Get%20xxx.png" div="" aglin="center"></p>
 <p>参考链接</p>
@@ -424,7 +405,9 @@
 <li>Next主题：<a href="http://theme-next.iissnan.com/getting-started.html#menu-settings" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html#menu-settings</a></li>
 <li>Cannot Get/xxx 错误解决：<a href="https://www.cnblogs.com/Sroot/p/6305938.html" target="_blank" rel="noopener">https://www.cnblogs.com/Sroot/p/6305938.html</a></li>
 <li>hexo添加设置、归档等：<a href="https://blog.csdn.net/ganzhilin520/article/details/79047249" target="_blank" rel="noopener">https://blog.csdn.net/ganzhilin520/article/details/79047249</a></li>
+<li>hexo添加自定义页面：<a href="https://www.jianshu.com/p/a25bfaa4c7cb" target="_blank" rel="noopener">https://www.jianshu.com/p/a25bfaa4c7cb</a></li>
 </ul>
+<p><a href="C:\Users\Administrator\Desktop\网页\主页" target="_blank" rel="noopener">作品</a></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=343027&auto=1&height=66"></iframe>
       
     </div>
