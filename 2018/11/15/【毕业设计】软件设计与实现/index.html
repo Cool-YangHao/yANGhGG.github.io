@@ -87,12 +87,13 @@
 <meta property="og:site_name" content="杨昊 | YangHao">
 <meta property="og:description" content="项目参考Arduino_N9200B音乐频谱 基于Arduino Pro Mimi_语音播放彩灯系统 超简单基于arduino控制全彩LED灯条-初篇 超简单基于arduino音乐控制全彩灯条视频效果+代码解析 WS2812 LED灯珠&amp;emsp;既然是做光立方，那么led是少不了的，ws2812灯珠里面自带一个信号补偿的芯片，所以所有的灯串联在一起，用一根信号线就可以驱动，不需要额外的接口提供信">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="d:/Hexo/images/key.png">
-<meta property="og:updated_time" content="2018-11-22T13:09:56.713Z">
+<meta property="og:image" content="http://yoursite.com/D:/Hexo/images/key.png">
+<meta property="og:image" content="http://yoursite.com/images/key.png">
+<meta property="og:updated_time" content="2018-11-23T14:54:36.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【毕业设计】软件设计与实现">
 <meta name="twitter:description" content="项目参考Arduino_N9200B音乐频谱 基于Arduino Pro Mimi_语音播放彩灯系统 超简单基于arduino控制全彩LED灯条-初篇 超简单基于arduino音乐控制全彩灯条视频效果+代码解析 WS2812 LED灯珠&amp;emsp;既然是做光立方，那么led是少不了的，ws2812灯珠里面自带一个信号补偿的芯片，所以所有的灯串联在一起，用一根信号线就可以驱动，不需要额外的接口提供信">
-<meta name="twitter:image" content="d:/Hexo/images/key.png">
+<meta name="twitter:image" content="http://yoursite.com/D:/Hexo/images/key.png">
 
 
 
@@ -380,12 +381,17 @@
 <li>光的颜色高度一致，性价比高。</li>
 </ul>
 <h2 id="Arduino"><a href="#Arduino" class="headerlink" title="Arduino"></a>Arduino</h2><p>&emsp;Arduino采用uno R3为控制平台，一开始是用的Mega2560，参考网上的教程，网上的例子用的是arduino mini，为了最大化程度接近原项目，确保项目的成功，所以采用了这块板子，经测试，mega2560也可以（其实mega2560性能是比uno r3高的），其它所有的硬件都是在这个开发板上进行构建开发。使用Arduino IDE 1.6.13版本作为开发环境。</p>
-<h2 id="ESP8266"><a href="#ESP8266" class="headerlink" title="ESP8266"></a>ESP8266</h2><p>控制终端采用乐鑫NodeMcu Esp8266这个模块，成本低廉，淘宝上约20元左右，这款模块是物联网开发神器。</p>
+<h2 id="Nodemcu-Esp8266"><a href="#Nodemcu-Esp8266" class="headerlink" title="Nodemcu Esp8266"></a>Nodemcu Esp8266</h2><p>控制终端采用乐鑫NodeMcu Esp8266这个模块，成本低廉，淘宝上约20元左右，模块虽小，五脏俱全，本身是一个小的开发板，上面用的芯片是Esp8266 12-E,</p>
 <h2 id="N9200B-MP3模块"><a href="#N9200B-MP3模块" class="headerlink" title="N9200B MP3模块"></a>N9200B MP3模块</h2><p>&emsp;说说这个模块吧，这个模块历经坎坷，这是后话…<br>&emsp;之前对音乐频谱这个功能的实现不甚了解，于是百度，看了看前人做的项目，两个类似的项目都是用的N9200B模块，随即上淘宝找，没找到…后来在别人项目评论里看到了，原来只有一家有卖，垄断！</p>
 <h2 id="蓝牙模块"><a href="#蓝牙模块" class="headerlink" title="蓝牙模块"></a>蓝牙模块</h2><p> 蓝牙使用HC-05模块，HC-05的模块资料有很多。<br> 专业老师指导说整个项目用无线实现，因此蓝牙未进行深入研究，所以蓝牙部分待补充。。。</p>
-<h2 id="物联网平台"><a href="#物联网平台" class="headerlink" title="物联网平台"></a>物联网平台</h2><p>物联网平台暂定使用贝壳物联，本来想使用机智云，可是看了看，没怎么搞明白，有很多的东西不知道该怎么调用。后期可能会改用机智云作为物联网平台。</p>
-<h2 id="硬件连接图"><a href="#硬件连接图" class="headerlink" title="硬件连接图"></a>硬件连接图</h2><p><img src="D:/Hexo/images/key.png" alt="图片文本(可忽略)"></p>
-<p>问题</p>
+<h2 id="物联网平台"><a href="#物联网平台" class="headerlink" title="物联网平台"></a>物联网平台</h2><p>&emsp;物联网平台暂定使用贝壳物联，本来想使用机智云，可是看了看，没怎么搞明白，有很多的东西不知道该怎么调用。后期可能会改用机智云作为物联网平台。  </p>
+<blockquote>
+<p>11.20更新,已经改为机智云作为控制平台</p>
+</blockquote>
+<h1 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h1><pre><code>根据原项目，确定好所需要的硬件设备，如上，然后开始正式的制作。
+</code></pre><h2 id="Step1-烧写nodemcu的固件"><a href="#Step1-烧写nodemcu的固件" class="headerlink" title="Step1.烧写nodemcu的固件"></a>Step1.烧写nodemcu的固件</h2><p>&emsp;因为要接入机智云平台，所以需要烧写固件使wifi模组与手机和平台通信，新购买的nodemcu里面是没有东西的。<br>我用的固件是</p>
+<h2 id="硬件连接图"><a href="#硬件连接图" class="headerlink" title="硬件连接图"></a>硬件连接图</h2><p><img src="/D:/Hexo/images/key.png" alt="图片文本(可忽略)"></p>
+<p><img src="/images/key.png" style="width: 300px;"></p>
 <p>信号紊乱，LED乱闪</p>
 <p>解决方案：LED模组独立供电，GND必须要连接Arduino</p>
 
@@ -560,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目参考"><span class="nav-number">1.</span> <span class="nav-text">项目参考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WS2812-LED灯珠"><span class="nav-number">1.1.</span> <span class="nav-text">WS2812 LED灯珠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arduino"><span class="nav-number">1.2.</span> <span class="nav-text">Arduino</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ESP8266"><span class="nav-number">1.3.</span> <span class="nav-text">ESP8266</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N9200B-MP3模块"><span class="nav-number">1.4.</span> <span class="nav-text">N9200B MP3模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙模块"><span class="nav-number">1.5.</span> <span class="nav-text">蓝牙模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物联网平台"><span class="nav-number">1.6.</span> <span class="nav-text">物联网平台</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件连接图"><span class="nav-number">1.7.</span> <span class="nav-text">硬件连接图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#项目参考"><span class="nav-number">1.</span> <span class="nav-text">项目参考</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#WS2812-LED灯珠"><span class="nav-number">1.1.</span> <span class="nav-text">WS2812 LED灯珠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Arduino"><span class="nav-number">1.2.</span> <span class="nav-text">Arduino</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nodemcu-Esp8266"><span class="nav-number">1.3.</span> <span class="nav-text">Nodemcu Esp8266</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#N9200B-MP3模块"><span class="nav-number">1.4.</span> <span class="nav-text">N9200B MP3模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙模块"><span class="nav-number">1.5.</span> <span class="nav-text">蓝牙模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物联网平台"><span class="nav-number">1.6.</span> <span class="nav-text">物联网平台</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发流程"><span class="nav-number">2.</span> <span class="nav-text">开发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Step1-烧写nodemcu的固件"><span class="nav-number">2.1.</span> <span class="nav-text">Step1.烧写nodemcu的固件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬件连接图"><span class="nav-number">2.2.</span> <span class="nav-text">硬件连接图</span></a></li></ol></li></ol></div>
             
 
           </div>
